@@ -1,2 +1,6 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+public struct Test {
+    
+    public static func greeting() {
+        print("Hi")
+    }
+}
