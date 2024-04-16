@@ -25,7 +25,7 @@ final class ViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.backgroundColor = .white
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constant.CellIdentifier)
         
         return tableView
     }()
@@ -102,7 +102,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifier, for: indexPath)
         cell.textLabel?.text = components[indexPath.row]
         return cell
     }
@@ -112,6 +112,11 @@ extension ViewController: UITableViewDataSource {
 // MARK: - Constant
 
 private extension ViewController {
+    
+    enum Constant {
+        
+        static let CellIdentifier = "Cell"
+    }
     
     enum Metric {
         
