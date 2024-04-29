@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  JDColor.swift
 //  
 //
 //  Created by 유정주 on 4/29/24.
@@ -18,7 +18,8 @@ public enum JDColor {
 
 public extension JDColor {
     
-    static var color: UIColor {
+    @available(iOS 13.0, *)
+    var color: UIColor {
         switch self {
         case .primary:
             UIColor(hex: "00b6d7")
