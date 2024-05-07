@@ -9,23 +9,14 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(hex: String, alpha: CGFloat = 1.0) {
-        var hexFormatted = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
-        
-        if hexFormatted.hasPrefix("#") {
-            hexFormatted = String(hexFormatted.dropFirst())
-        }
-        
-        assert(hexFormatted.count == 6, "Invalid hex code used.")
-        
-        var rgbValue: UInt64 = 0
-        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
-        
-        self.init(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: alpha
-        )
+    convenience init(red: Int, green: Int, blue: Int) {
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(hex rgb: Int) {
+        let r = (rgb >> 16) & 0xFF
+        let g = (rgb >> 8) & 0xFF
+        let b = rgb & 0xFF
+        self.init(red: r, green: g, blue: b)
     }
 }
