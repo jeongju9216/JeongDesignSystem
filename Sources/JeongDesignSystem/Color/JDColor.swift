@@ -9,22 +9,12 @@ import UIKit
 
 public enum JDColor {
     
-    case primary
-    case background
-}
-
-
-// MARK: - Color
-
-public extension JDColor {
+    static let primary = UIColor(hex: 0x00b6d7)
+    static let background = UIColor.systemBackground
     
-    @available(iOS 13.0, *)
-    var color: UIColor {
-        switch self {
-        case .primary:
-            UIColor(hex: "00b6d7")
-        case .background:
-            UIColor.systemBackground
-        }
-    }
+    // MARK: Gray
+    
+    static let lightGray = UIColor(hex: 0xE3E3E3)
+    static let gray = UIColor(hex: 0x999999)
+    static let darkGray = UIColor(hex: 0x404040)
 }
