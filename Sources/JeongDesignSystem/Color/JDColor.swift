@@ -14,7 +14,7 @@ public enum JDColor {
     
     // MARK: Gray
     
-    public static let lightGray = UIColor(hex: 0xE3E3E3)
-    public static let gray = UIColor(hex: 0x999999)
+    public static let lightGray = UIColor(hex: 0xF9F9F9)
+    public static let gray = UIColor(hex: 0xE3E3E3)
     public static let darkGray = UIColor(hex: 0x404040)
 }
