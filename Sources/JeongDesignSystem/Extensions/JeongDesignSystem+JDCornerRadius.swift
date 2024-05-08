@@ -7,12 +7,12 @@
 
 import UIKit
 
-public extension UIView {
+public extension JeongDesignSystem {
     
     @discardableResult
     public func cornerRadius(_ cornerRadius: JDCornerRadius) -> Self {
-        clipsToBounds = true
-        layer.cornerRadius = cornerRadius.value
+        view.clipsToBounds = true
+        view.layer.cornerRadius = cornerRadius.value
         return self
     }
 }

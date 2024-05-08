@@ -42,9 +42,7 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Test.greeting()
-        
+                
         setUpAttributes()
         setUpSubviews()
         setUpConstraints()
