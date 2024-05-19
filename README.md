@@ -18,4 +18,4 @@
   - Major: 하위 호환성을 지원하지 않는 업데이트
   - Minor: 컴포넌트 추가 등의 기능 추가 업데이트
   - Patch: 사소한 업데이트
-- 각 버전의 Release GitHub Release로 관리한다.
+- 각 버전은 GitHub Release로 관리한다.
